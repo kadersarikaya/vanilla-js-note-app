@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>My Notes</h1>
+            <input type="text" class="search" placeholder="Search...">
+            <button>Add Note</button>
+        </div>
+    </header>
+    <main>
+        <!-- Categories -->
+        <div class="categories">
+            <ul id="category-list">
+                <li><button>Category 1</button></li>
+                <li><button>Category 2</button></li>
+                <li><button>Category 3</button></li>
+            </ul>
+            <button onclick="openForm()" class="add-category">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <div id="add-category" class="form-popup" >
+                <form  onsubmit="return addNewCategory()" class="form-container">
+            
+                    <label for="text"><b>Category Name</b></label>
+                    <input id="category-input" type="text" placeholder="Category Name" name="text" required>
+            
+                    <button type="submit" class="btn">Add</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <!-- Notes -->
+        <div class="notes">
+            <div class="note">
+                <div class="title flex">
+                    <h3>Note Title</h3>
+                    <div class="action-btns">
+                        <button class="edit-btn"><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="note-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+                <div class="date">
+                    <small>12/12/2020</small>
+                </div>
+            </div>
+            <div class="note">
+                <div class="title flex">
+                    <h3>Note Title</h3>
+                    <div class="action-btns">
+                        <button><i class="fa-regular fa-pen-to-square"></i></button>
+                        <button><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="note-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+                </div>
+                <div class="date">
+                    <small>12/12/2020</small>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/5b1bdb9ad0.js" crossorigin="anonymous"></script>
+    <script src="./app.js">
+    </script>
+</body>
+</html>
